@@ -1,0 +1,23 @@
+{
+  "name": "a11y-ledger",
+  "version": "0.1.0",
+  "description": "Track reviewed axe accessibility exceptions without hiding new regressions.",
+  "type": "module",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/jeptvar/a11y-ledger.git" },
+  "homepage": "https://github.com/jeptvar/a11y-ledger#readme",
+  "bugs": { "url": "https://github.com/jeptvar/a11y-ledger/issues" },
+  "engines": { "node": ">=22" },
+  "bin": { "a11y-ledger": "bin/a11y-ledger.js" },
+  "exports": { ".": "./src/index.js", "./playwright": "./src/playwright.js" },
+  "files": ["bin", "src", "README.md", "LICENSE", "examples"],
+  "scripts": {
+    "test": "node --test",
+    "demo": "node scripts/demo.mjs",
+    "test:browser": "node scripts/browser-smoke.mjs"
+  },
+  "keywords": ["accessibility", "axe", "playwright", "a11y", "baseline", "ci"],
+  "peerDependencies": { "@axe-core/playwright": "^4.14.0" },
+  "peerDependenciesMeta": { "@axe-core/playwright": { "optional": true } },
+  "devDependencies": { "@axe-core/playwright": "4.14.0", "@playwright/test": "1.64.1" }
+}
